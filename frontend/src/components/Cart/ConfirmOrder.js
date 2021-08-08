@@ -57,8 +57,8 @@ const ConfirmOrder = ({history}) => {
                             <img src={item.image} alt="Laptop" height="45" width="65" />
                         </div>
 
-                        <div className="col-5 col-lg-6">
-                            <Link to={`/product/${item.product}`}>{item.name}</Link>
+                      <div className="col-5 col-lg-6">
+                          <Link to={`/product/${item.product}`}>{item.name}</Link>
                         </div>
 
 

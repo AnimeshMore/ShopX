@@ -15,12 +15,18 @@ process.on('uncaughtException', err =>{
 
 if(process.env.NODE_ENV !== 'PRODUCTION') require('dotenv').config({path:"backend/config/config.env"});
 
+//dotenv.config({path:"backend/config/config.env"});
+
 
 connectDatabase();
 
-const server = app.listen(process.env.PORT, () =>{
+/*const server = app.listen(process.env.PORT, () =>{
     console.log('Server started on PORT:', process.env.PORT ,'in', process.env.NODE_ENV ,'mode.');
-});
+});*/
+
+const server = app.listen(process.env.PORT, () => {
+    console.log(`Server started on PORT: ${process.env.PORT} in ${process.env.NODE_ENV} mode.`)
+})
 
 //Setting up cloudinary
 
